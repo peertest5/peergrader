@@ -32,8 +32,9 @@ def average(img1, img2):
     Returns:
         numpy output array of the averaged pixels of the input
     """
-    averaged = np.mean(np.array([img1, img2]), axis=0)
-    return averaged.astype(img1.dtype)
+    avg = img1 + img2
+    avg = avg / 2
+    return avg.astype(img1.dtype)
     
 def lighten(img1, img2):
     """Performs the "lighten" blend operation on two images
